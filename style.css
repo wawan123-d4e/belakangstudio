@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fdf5ec, #f7e1d7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeSlide 0.8s ease;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 15px;
+  border-radius: 10%;
+  object-fit: cover;
+  animation: bounceIn 1s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: 1.9em;
+  color: #6b3e26;
+  animation: fadeInText 1.2s ease-in-out;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+p {
+  margin: 10px 0 4px;
+  font-size: 1em;
+  color: #4b3832;
+}
+
+input {
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #e0cfc4;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 5px;
+  background-color: #fffaf7;
+  transition: border 0.3s ease, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color:#2F3640;
+  outline: none;
+  box-shadow: 0 0 5px rgba(139, 74, 50, 0.3);
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  background-color:#2F3640;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #a75638;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.note {
+  font-size: 0.9em;
+  color: #999;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  .card {
+    padding: 30px 20px;
+  }
+}
